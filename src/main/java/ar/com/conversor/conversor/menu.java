@@ -1,46 +1,47 @@
 
 package ar.com.conversor.conversor;
 
+
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author ellaion
  */
-public class menu extends JFrame{
+public class menu {
     private int opcion;
-    // JLabel ventana;
-     String [] respuesta ={"si, quiero", "no, gracias"};
-      String [] opcionMenu ={"conversor de moneda", "clima"};
-    String img = "/src/main/java/ar/com/conversor/img/fondo.jpeg";
+     private final String [] opcionMenu ={"Conversor de Moneda", "Encriptador de Contraseña", "Conversor de Medidas", "Consulta de Peso", "Conversor de Grados Centrigrados a Grados Farenheit"};
+
     
     
     public menu(){
-     /*   setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400,400);
-        setLocationRelativeTo(null);
-        setLayout(null);
-        setVisible(true);
-        setTitle("Menu Principal"); 
-*/
+     
 
-       // ventana = new JLabel();
 
-       // ventana.setIcon(new ImageIcon(this.img));
-        
-        //add(this.ventana);
+      
         
              while(this.opcion ==0){
                  
             
-            String menu = ""+JOptionPane.showInputDialog(null,"Menu","Elegir",JOptionPane.QUESTION_MESSAGE,null,this.opcionMenu,this.opcionMenu[0]);
-                 System.out.println(menu);
-            this.opcion = JOptionPane.showOptionDialog(rootPane, null, "Queres continuar usando el programa", WIDTH, HEIGHT, null, respuesta, EXIT_ON_CLOSE);
-           
+           String menu = (String)JOptionPane.showInputDialog(null,"Menu","Elegir",JOptionPane.QUESTION_MESSAGE,new ImageIcon("/home/ellaion/Documentos/Alura/conversor/src/main/java/ar/com/conversor/img/fondo.jpeg"),this.opcionMenu,this.opcionMenu[0]);
+                 eleccionDelMenu(menu);
+            this.opcion = new MenuContinuar().menu("/home/ellaion/Documentos/Alura/conversor/src/main/java/ar/com/conversor/img/fondo.jpeg");
+        
              }
+        
+    }
+    public void eleccionDelMenu(String opcionMenu){
+        switch(opcionMenu){
+          
+            case  "Conversor de Moneda":
+                new ConversorMoneda();
+                       
+                break;
+                
+                default:
+                    System.exit(0);
+        }
         
     }
 }
