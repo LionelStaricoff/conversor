@@ -35,10 +35,12 @@ public class menu {
         switch(opcionMenu){
           
             case  "Conversor de Moneda":
-                new ConversorMoneda();
-                       
+                new ConversorMoneda();   
                 break;
                 
+            case "Encriptador de Contraseña":
+                new EncriptadorDeContraseña();
+                break;
                 default:
                     System.exit(0);
         }

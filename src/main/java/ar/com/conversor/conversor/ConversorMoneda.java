@@ -66,7 +66,7 @@ public class ConversorMoneda {
         while(validar){
           //  Component parentComponent,
       //  Object message, String title, int messageType, Icon icon
-          dato = JOptionPane.showInputDialog("ingresa el valor a convertir");
+          dato = JOptionPane.showInputDialog("Ingresa el valor a convertir");
       if(Herramientas.isNumber(dato) ){
          resultado =  Integer.parseInt(dato);
          validar = false;
