@@ -11,7 +11,9 @@ import javax.swing.JOptionPane;
  */
 public class menu {
     private int opcion;
-     private final String [] opcionMenu ={"Conversor de Moneda", "Encriptador de Contraseña", "Conversor de Medidas", "Consulta de Peso", "Conversor de Grados Centrigrados a Grados Farenheit"};
+     private final String [] opcionMenu ={"Conversor de Moneda", 
+         "Encriptador de Contraseña", "Conversor de Medidas", "Consulta de Peso", 
+         "Conversor de Grados Centrigrados a Grados Farenheit"};
 
     
     
@@ -41,6 +43,12 @@ public class menu {
             case "Encriptador de Contraseña":
                 new EncriptadorDeContraseña();
                 break;
+                
+            case "Conversor de Medidas":
+                new ConversorDeMedidas();
+                break;
+                
+                
                 default:
                     System.exit(0);
         }

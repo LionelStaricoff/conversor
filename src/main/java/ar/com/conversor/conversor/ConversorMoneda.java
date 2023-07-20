@@ -28,54 +28,31 @@ public class ConversorMoneda {
     }
     
     public void convertirMoneda(String opcion){
+        String img = "/home/ellaion/Documentos/Alura/conversor/src/main/java/ar/com/conversor/img/cambio.jpg";
         switch(opcion){
             case "Pesos Colombanos a Dolar":
-                ventanaResultado(opcion,ventanaIngreseValor() / this.DOLAR);
+                Herramientas.ventanaResultado(opcion,Herramientas.ventanaIngreseValor() / this.DOLAR,img);
                break;
                 
             case "Dolar a Pesos Colombianos":
-                ventanaResultado(opcion,ventanaIngreseValor() * this.DOLAR);
+                Herramientas.ventanaResultado(opcion,Herramientas.ventanaIngreseValor() * this.DOLAR,img);
                 break;
                 
                  case "Pesos Colombanos a Euro":
-                ventanaResultado(opcion,ventanaIngreseValor() / this.EURO);
+                Herramientas.ventanaResultado(opcion,Herramientas.ventanaIngreseValor() / this.EURO,img);
                 break;
                 
                  case "Euro a Pesos Colombianos":
-                ventanaResultado(opcion,ventanaIngreseValor() * this.EURO);
+                Herramientas.ventanaResultado(opcion,Herramientas.ventanaIngreseValor() * this.EURO,img);
                 break;
             default :
                  JOptionPane.showMessageDialog( null,"Opsion incorrecta");
         }
         
     }
-     /**
-     * <p> ventana para mostrar el resultado</p>
-     */
-    public void ventanaResultado(String titulo,float numero){
-        JOptionPane.showMessageDialog(null,"El resultado es\n" +numero,titulo, HEIGHT, new ImageIcon("/home/ellaion/Documentos/Alura/conversor/src/main/java/ar/com/conversor/img/cambio.jpg"));
-    }
     
-    /**
-     * <p> ventana para ingresar el valor para procesar</p>
-     */
-    public float ventanaIngreseValor(){
-         int resultado = 0;
-         String dato;
-         boolean validar = true;
-        while(validar){
-          //  Component parentComponent,
-      //  Object message, String title, int messageType, Icon icon
-          dato = JOptionPane.showInputDialog("Ingresa el valor a convertir");
-      if(Herramientas.isNumber(dato) ){
-         resultado =  Integer.parseInt(dato);
-         validar = false;
-      }else{
-          JOptionPane.showMessageDialog( null,"error , ingrese solo numeros");
-      }
-        }
-      return resultado;
-    }
+    
+  
     
     
  
