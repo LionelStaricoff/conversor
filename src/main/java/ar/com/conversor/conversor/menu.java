@@ -13,7 +13,7 @@ public class menu {
     private int opcion;
      private final String [] opcionMenu ={"Conversor de Moneda", 
          "Encriptador de Contraseña", "Conversor de Medidas", "Consulta de Peso", 
-         "Conversor de Grados Centrigrados a Grados Farenheit"};
+         "Grados Centrigrados a Grados Farenheit"};
 
     
     
@@ -48,6 +48,12 @@ public class menu {
                 new ConversorDeMedidas();
                 break;
                 
+            case "Consulta de Peso":
+                new ConsultaDePeso();
+                break;
+            case "Grados Centrigrados a Grados Farenheit":
+                new GradosCentrigradosAGradosFarenheit();
+                break;
                 
                 default:
                     System.exit(0);

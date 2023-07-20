@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  */
 public class ConversorDeMedidas {
 private final String img = "/home/ellaion/Documentos/Alura/conversor/src/main/java/ar/com/conversor/img/unidadesDeMedida.jpg";
- 
+private final String img2 = "/home/ellaion/Documentos/Alura/conversor/src/main/java/ar/com/conversor/img/metrosPersonaje.jpg"; 
      private final String [] opcionMenu ={"Metros a Centimetros","Metros a Milimetros",
          "Centimetros a Metros","Centimetros a Milimetros",
          "Milimetros a Metros", "Milimetros a Centimetros"};
@@ -22,7 +22,7 @@ private final String img = "/home/ellaion/Documentos/Alura/conversor/src/main/ja
            while(this.opcion ==0){
          String menu = (String)JOptionPane.showInputDialog(null,"Menu","Elegir",JOptionPane.QUESTION_MESSAGE,new ImageIcon(this.img),this.opcionMenu,this.opcionMenu[0]);
             menuMedidas(menu);
-         this.opcion = new MenuContinuar().menu(this.img);
+         this.opcion = new MenuContinuar().menu(this.img2);
              }
     }
 
