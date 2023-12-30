@@ -1,4 +1,4 @@
-##Proyecto para mostrar el funcionamiento logico con java,
+<h1>Proyecto para mostrar el funcionamiento lógico con Java,<h1>
 <h3> Realizado con prompt utilizando JOptionPane para entrada de datos.   </h3>
 
 <ol>
